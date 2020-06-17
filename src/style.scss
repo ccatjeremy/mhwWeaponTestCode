@@ -127,14 +127,19 @@ body{
                 >.startText{
                     position: absolute;
                     height: 55%;
+                    min-height:400px;
                     transform: translate(-50%, -50%);
                     left: 50%;
                     top: 50%;
                     @include smallMobile{
                         height:70%;
+                        min-height: 300px;
                     }
                     @include mobileLand{
                         height:90%;
+                    }
+                    @include pc1366{
+                        height: 78%;
                     }
                     .insideStartText{
                         width: 100%;
@@ -326,6 +331,7 @@ body{
                 >.questAnimate{
                     width: 100%;
                     height: 100%;
+                    min-height: 200px;
                     display: flex;
                     position: relative;
                     justify-content: center;
@@ -678,7 +684,7 @@ body{
             transition: all 300ms;
             background-color: rgba($color: #232323, $alpha: 1.0);
             flex:0.00001;
-            margin-bottom: 3%;
+            margin-bottom: 1.5%;
             @include pad{
                 width: 80%;
             }
@@ -687,6 +693,12 @@ body{
             }
             @include mobileLand{
                 margin-bottom: 1px;
+            }
+            @include pc1366{
+                margin-bottom: 1%;
+            }
+            @media only screen and (max-height:650px){
+                margin-bottom: 1%;
             }
             .testCi{
                 width: 100%;
@@ -714,6 +726,12 @@ body{
                         font-size: 2.5rem;
                         line-height: 1.2em;
                         margin: 0.5em 0;
+                    }
+                    @include pc1366{
+                        margin: 0.7em 0;
+                    }
+                    @media only screen and (max-height:650px){
+                        margin: 0.7em 0;
                     }
                 }
                 .ans{
@@ -888,7 +906,7 @@ footer{
 	.st95{fill:#6DBACC;}
     .Q7moving{stroke-dashoffset:0;stroke-dasharray: 2,20;}
     @include mobileLand{
-        width: 45%;
+        width: 100%;
     }
 }
 

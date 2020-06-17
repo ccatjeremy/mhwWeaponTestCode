@@ -48,6 +48,11 @@ import cardBack from './img/card/cardBack.png';
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+$(window).resize(()=>{
+    vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+})
 let cardRowForRandom = [
     card1,card2,card3,card4,card5,
     card6,card7,card8,card9,card10,
@@ -1197,7 +1202,7 @@ class EnterPage extends React.Component{//入口頁動畫
         }
         Velocity.hook($('.test'), 'display','flex');
         Velocity.hook($('.test'), 'opacity','1');
-        Velocity($('.ci'),{'margin-top':'3%','margin-bottom':'3%'},{duration:250,queue:false})
+        Velocity($('.ci'),{'margin-top':'1.5%','margin-bottom':'1.5%'},{duration:250,queue:false})
         },500)
 
         setTimeout(()=>{
