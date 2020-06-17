@@ -604,6 +604,9 @@ body{
                             display: flex;
                             justify-content: space-around;
                             cursor: default;
+                            @media only screen and (max-height:680px){
+                                height: 30%;
+                            }
                             >.scoreBarName{
                                 display: flex;
                                 align-items: center;
